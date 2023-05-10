@@ -1,7 +1,7 @@
 package hexlet.code.games;
 import java.util.Scanner;
+
 import static hexlet.code.Cli.name;
-/* ranNumb - случайное число заданного интервала */
 
 public class Even {
     public static void playEven() {
