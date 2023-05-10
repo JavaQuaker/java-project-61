@@ -1,6 +1,5 @@
 package hexlet.code.games;
 import java.util.Scanner;
-
 import static hexlet.code.Cli.name;
 
 public class Even {
@@ -15,8 +14,8 @@ public class Even {
                 String answer = scanner.nextLine();
                 if (ranNumb % 2 == 0) {
                     String result1 = answer.equals("yes") ? "Correct!" : "'no' is wrong answer ;(. "
-                            + "Correct answer 'yes'.\n"
-                            + "Let's try again, " + " " + name;
+                                + "Correct answer 'yes'.\n"
+                                + "Let's try again, " + " " + name;
                     System.out.println(result1);
                     if (result1.equals("Correct!")) {
                         count++;
@@ -26,8 +25,8 @@ public class Even {
                 }
                 if (ranNumb % 2 != 0) {
                     String result2 = answer.equals("no") ? "Correct!" : "'yes' is wrong answer ;(. "
-                            + "Correct answer 'no'. \n "
-                            + "Let's try again, " + " " + name;
+                                + "Correct answer 'no'. \n "
+                                + "Let's try again, " + " " + name;
                     System.out.println(result2);
                     if (result2.equals("Correct!")) {
                         count++;
@@ -43,3 +42,4 @@ public class Even {
         }
     }
 }
+
