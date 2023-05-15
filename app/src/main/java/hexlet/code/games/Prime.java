@@ -1,54 +1,54 @@
 package hexlet.code.games;
+
+import hexlet.code.Engine;
+
 import java.util.Scanner;
-import static hexlet.code.Cli.name;
-/*runNumb - случайное число заданного интервала */
 
 public class Prime {
-    public static void prime() {
-        int count = 0;
+    public static String[][] arr;
+    public static int ranNumb;
 
-        while (true) {
-            int ranNumb = (int) (Math.random() * (100 - 1) + 1);
+    public static void prime() {
+        Engine.count = 0;
+        while (Engine.count < 3) {
+            ranNumb = (int) (Math.random() * (100 - 2) + 2);
+
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
             System.out.println("Question: " + " " + ranNumb);
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextLine()) {
-                String answer = scanner.nextLine();
-                boolean y = false;
-                for (int i = 2; i < ranNumb; i++) {
-                    if (ranNumb % i == 0) {
-                        y = true;
-                    }
-                }
-                if (y) {
-                    String result = answer.equals("no") ? "Correct!" : "'yes' is wrong answer ;(. "
-                            + "Correct answer 'no'.\n"
-                            + "Let's try again, " + " " + name;
-
-                    System.out.println(result);
-                    if (result.equals("Correct!")) {
-                        count++;
-                    } else {
-                        count = 0;
-                    }
-                }
-                if (!y) {
-                    String result2 = answer.equals("yes") ? "Correct!" : "'no' is wrong answer ;(. "
-                            + "Correct answer 'yes'.\n"
-                            + "Let's try again, " + " " + name;
-                    System.out.println(result2);
-                    if (result2.equals("Correct!")) {
-                        count++;
-                    } else {
-                        count = 0;
-                    }
-                }
-            }
-
-            if (count == 3) {
-                System.out.println("Congratulations, " + " " + name + "!");
-                break;
+                Engine.answer = scanner.nextLine();
+                findPrime();
             }
         }
     }
+
+    public static void findPrime() {
+        int temp = 0;
+        boolean x = false;
+        for (int i = 2; i < ranNumb; i++) {
+            if (ranNumb % i == 0) {
+                x = true;
+            }
+        }
+        if (x) {
+            Engine.logic(arr = new String[][]{new String[]{Integer.toString(temp), "no"}});
+        } else {
+
+            Engine.logic(arr = new String[][]{new String[]{Integer.toString(temp), "yes"}});
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

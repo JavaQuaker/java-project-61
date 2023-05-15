@@ -1,9 +1,8 @@
 package hexlet.code.games;
+import hexlet.code.Engine;
 import java.util.Arrays;
 import java.util.Scanner;
-
-import static hexlet.code.Cli.name;
-/*Генерируем случайнычсила:
+/*Генерируем случайныe чсила:
  * аrrayLength - длина массива
  * firstInd - первое значение массива
  * randInd = шаг массива
@@ -12,46 +11,37 @@ import static hexlet.code.Cli.name;
  * randIndArr - случайный скрываемый индекс. */
 
 public class Progression {
+    public static String[][] arr;
+
     public static void progress() {
-        int count = 0;
-        while (true) {
+        System.out.println("What number is missing in the progression?");
+
+        while (Engine.count < 3) {
             int arrayLength = (int) ((Math.random() * (20 - 10)) + 10);
             int firstInd = (int) ((Math.random() * (20 - 2)) + 2);
             int randInd = (int) ((Math.random() * (9 - 2)) + 2);
 
-            int[] arr = new int[arrayLength];
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = (i * randInd) + firstInd;
+            System.out.println("Question: " + " ");
+            int[] array = new int[arrayLength];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = firstInd + (i * randInd);
             }
-            int randIndArr = (int) ((Math.random() * (arr.length - 1)) + 1);
-
+            int randIndArr = (int) (Math.random() * (array.length - 1) + 1);
             String[] stringArr = new String[arrayLength];
             for (int i = 0; i < stringArr.length; i++) {
-                stringArr[i] = Integer.toString(arr[i]);
+                stringArr[i] = Integer.toString(array[i]);
                 if (i == randIndArr) {
                     stringArr[i] = "..";
                 }
+                System.out.print(stringArr[i] + " ");
             }
-            System.out.println("Question: " + " " + Arrays.toString(stringArr));
-
+            System.out.println();
+            System.out.println("Your answer: " + " ");
             Scanner scanner = new Scanner(System.in);
-            if (scanner.hasNextInt()) {
-                int answer = scanner.nextInt();
-                String result = (arr[randIndArr] == answer) ? "Your answer: " + answer + "\n" + "Correct!"
-                        : "Your answer:" + answer + "\n" + "'" + answer + "'" + "is wrong answer ;(. Correct answer was"
-                        + "'" + arr[randIndArr] + "'" + "\n" + "Let's try again, " + " " + name + "!";
-                System.out.println(result);
-                if (arr[randIndArr] == answer) {
-                    count++;
-                } else {
-                    count = 0;
-                }
+            if (scanner.hasNextLine()) {
+                Engine.answer = scanner.nextLine();
             }
-            if (count == 3) {
-                System.out.println("Congratulations, " + " " + name + "!");
-                break;
-            }
+            Engine.logic(arr = new String[][]{new String[]{Arrays.toString(stringArr), Integer.toString(array[randIndArr])}});
         }
     }
 }
-
