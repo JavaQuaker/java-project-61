@@ -18,17 +18,13 @@ public class Even {
                 Engine.answer = scanner.nextLine();
             }
             if (ranNumb % 2 == 0) {
-                Engine.logic(arr = new String[][]{new String[]{convertString, "yes"}});
+                arr = new String[][]{new String[]{convertString, "yes"}};
+                Engine.logic(arr);
 
             } else {
-                Engine.logic(arr = new String[][]{new String[]{convertString, "no"}});
+                arr = new String[][]{new String[]{convertString, "no"}};
+                Engine.logic(arr);
             }
         }
     }
 }
-
-
-
-
-
-

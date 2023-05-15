@@ -9,7 +9,6 @@ import java.util.Scanner;
  *
  * Генерируем массив с вышеобозначенными параметрами
  * randIndArr - случайный скрываемый индекс. */
-
 public class Progression {
     public static String[][] arr;
 
@@ -41,8 +40,9 @@ public class Progression {
             if (scanner.hasNextLine()) {
                 Engine.answer = scanner.nextLine();
             }
-            Engine.logic(arr = new String[][]{new String[]{Arrays.toString(stringArr),
-                    Integer.toString(array[randIndArr])}});
+            arr = new String[][]{new String[]{Arrays.toString(stringArr),
+                    Integer.toString(array[randIndArr])}};
+            Engine.logic(arr);
         }
     }
 }

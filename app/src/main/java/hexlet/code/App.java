@@ -1,7 +1,10 @@
 package hexlet.code;
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) {
 
@@ -54,6 +57,8 @@ public class App {
                     System.out.println("Welcome to the Brain Games!");
                     Cli.greeting();
                     Prime.prime();
+                default:
+                    break;
 
             }
         }

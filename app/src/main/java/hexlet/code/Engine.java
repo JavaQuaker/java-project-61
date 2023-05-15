@@ -1,4 +1,5 @@
 package hexlet.code;
+
 public class Engine {
     public static String answer;
     public static int count;
@@ -15,7 +16,7 @@ public class Engine {
                         break;
                     }
                 } else {
-                    if (answer.equals(arr[i][1]) == false) {
+                    if (!answer.equals(arr[i][1])) {
                         System.out.println(answer + " " + "is wrong answer ;(. Correct answer was" + " " + arr[i][1]
                                 + ".\n" + "Let's try again, " + " " + Cli.name + "!");
                         System.exit(0);
@@ -28,13 +29,3 @@ public class Engine {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-

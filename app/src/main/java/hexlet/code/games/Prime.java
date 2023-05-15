@@ -1,9 +1,7 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
 
 import java.util.Scanner;
-
 public class Prime {
     public static String[][] arr;
     public static int ranNumb;
@@ -32,23 +30,12 @@ public class Prime {
             }
         }
         if (x) {
-            Engine.logic(arr = new String[][]{new String[]{Integer.toString(temp), "no"}});
+            arr = new String[][]{new String[]{Integer.toString(temp), "no"}};
+            Engine.logic(arr);
         } else {
-
-            Engine.logic(arr = new String[][]{new String[]{Integer.toString(temp), "yes"}});
+            arr = new String[][]{new String[]{Integer.toString(temp), "yes"}};
+            Engine.logic(arr);
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

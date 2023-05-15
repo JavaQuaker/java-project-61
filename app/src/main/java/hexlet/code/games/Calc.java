@@ -1,9 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Scanner;
-
 public class Calc {
-
     public static String[][] arr;
 
     public static void calculation() {
@@ -21,7 +19,9 @@ public class Calc {
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextLine()) {
                 Engine.answer = scanner.nextLine();
-                Engine.logic(arr = new String[][]{new String[]{Integer.toString(ranNmb1) + operations[result] + Integer.toString(ranNumb2), Integer.toString(array[result])}});
+                arr = new String[][]{new String[]{Integer.toString(ranNmb1) + operations[result]
+                        + Integer.toString(ranNumb2), Integer.toString(array[result])}};
+                Engine.logic(arr);
             }
         }
     }

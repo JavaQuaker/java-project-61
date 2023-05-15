@@ -1,7 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Scanner;
-
 public class GCD {
     public static String[][] arr;
     public static int ranNumb1;
@@ -37,7 +36,8 @@ public class GCD {
                 }
             }
         }
-        Engine.logic(arr = new String[][]{new String[]{Integer.toString(ranNumb1) + " " + Integer.toString(ranNumb2),
-                Integer.toString(rem)}});
+        arr = new String[][]{new String[]{Integer.toString(ranNumb1) + " " + Integer.toString(ranNumb2),
+                Integer.toString(rem)}};
+        Engine.logic(arr);
     }
 }
