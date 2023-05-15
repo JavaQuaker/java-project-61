@@ -41,7 +41,8 @@ public class Progression {
             if (scanner.hasNextLine()) {
                 Engine.answer = scanner.nextLine();
             }
-            Engine.logic(arr = new String[][]{new String[]{Arrays.toString(stringArr), Integer.toString(array[randIndArr])}});
+            Engine.logic(arr = new String[][]{new String[]{Arrays.toString(stringArr),
+                    Integer.toString(array[randIndArr])}});
         }
     }
 }
