@@ -10,17 +10,13 @@ import java.util.Scanner;
  * Генерируем массив с вышеобозначенными параметрами
  * randIndArr - случайный скрываемый индекс. */
 public class Progression {
-    public static String[][] arr;
-
     public static void progress() {
+        String[][] arr = new String[3][2];
         System.out.println("What number is missing in the progression?");
-
-        while (Engine.count < 3) {
+        for (int k = 0; k < 3; k++) {
             int arrayLength = (int) ((Math.random() * (20 - 10)) + 10);
             int firstInd = (int) ((Math.random() * (20 - 2)) + 2);
             int randInd = (int) ((Math.random() * (9 - 2)) + 2);
-
-            System.out.println("Question: " + " ");
             int[] array = new int[arrayLength];
             for (int i = 0; i < array.length; i++) {
                 array[i] = firstInd + (i * randInd);
@@ -32,17 +28,9 @@ public class Progression {
                 if (i == randIndArr) {
                     stringArr[i] = "..";
                 }
-                System.out.print(stringArr[i] + " ");
             }
-            System.out.println();
-            System.out.println("Your answer: " + " ");
-            Scanner scanner = new Scanner(System.in);
-            if (scanner.hasNextLine()) {
-                Engine.answer = scanner.nextLine();
-            }
-            arr = new String[][]{new String[]{Arrays.toString(stringArr),
-                    Integer.toString(array[randIndArr])}};
-            Engine.logic(arr);
+            arr[k] = new String[]{Arrays.toString(stringArr), Integer.toString(array[randIndArr])};
         }
+        Engine.logic(arr);
     }
 }
