@@ -1,7 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
 public class Prime {
     public static int ranNumb;
 
@@ -15,8 +14,7 @@ public class Prime {
         }
         Engine.logic(arr);
     }
-    public static String findPrime(int ranNumb) {
-        int temp = 0;
+    public static String findPrime(int ranNumber) {
         boolean x = false;
         for (int i = 2; i < ranNumb; i++) {
             if (ranNumb % i == 0) {

@@ -1,7 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Arrays;
-import java.util.Scanner;
+
 /*Генерируем случайныe чсила:
  * аrrayLength - длина массива
  * firstInd - первое значение массива

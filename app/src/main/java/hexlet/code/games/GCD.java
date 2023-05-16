@@ -1,6 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Scanner;
+
 public class GCD {
     public static int ranNumb1;
     public static int ranNumb2;
@@ -16,7 +16,7 @@ public class GCD {
         }
         Engine.logic(arr);
     }
-    public static int findNod(int ranNumb1, int ranNumb2) {
+    public static int findNod(int ranNumber1, int ranNumber2) {
         int rem = 0;
         for (int i = 1; i <= ranNumb1; i++) {
             for (int j = 1; j <= ranNumb2; j++) {

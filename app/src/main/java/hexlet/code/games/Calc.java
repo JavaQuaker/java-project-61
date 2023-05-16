@@ -1,6 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Scanner;
+
 public class Calc {
     public static void calculation() {
         String[][] arr = new String[3][2];
