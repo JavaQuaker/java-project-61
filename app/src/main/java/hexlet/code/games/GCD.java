@@ -4,6 +4,9 @@ import hexlet.code.Engine;
 public class GCD {
     private static int ranNumb1;
     private static int ranNumb2;
+    public static final int UP_LIMIT = 100;
+    public static final int STR_ARR = 3;
+    public static final int COL_ARR = 2;
 
 
 
@@ -16,12 +19,12 @@ public class GCD {
     }
 
     public static void maxNod() {
-        String[][] arr = new String[3][2];
+        String[][] arr = new String[STR_ARR][COL_ARR];
 
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
-            ranNumb1 = (int) ((Math.random() * (100 - 1)) + 1);
-            ranNumb2 = (int) ((Math.random() * (100 - 1)) + 1);
+            ranNumb1 = (int) ((Math.random() * (UP_LIMIT - 1)) + 1);
+            ranNumb2 = (int) ((Math.random() * (UP_LIMIT - 1)) + 1);
             arr[i] = new String[]{Integer.toString(getRanNumb1()) + " " + Integer.toString(getRanNumb2()),
                     Integer.toString(findNod(getRanNumb1(), getRanNumb2()))};
         }
