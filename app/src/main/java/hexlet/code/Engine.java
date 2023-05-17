@@ -16,7 +16,7 @@ public class Engine {
                 if (arr[i][1].equals(answer)) {
                     String result = (answer.equals(arr[i][1])) ? "Correct!" : answer + " " + "is wrong answer ;(. "
                             + "Correct answer was" + arr[i][1] + ".\n" + "Let's try again, " + " " + Cli.name + "!";
-                    System.out.println(result);
+                    System.out.println("Your answer: " + result);
 
                 } else {
                     if (!answer.equals(arr[i][1])) {
