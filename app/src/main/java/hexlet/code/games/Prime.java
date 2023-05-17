@@ -24,13 +24,13 @@ public class Prime {
             if (ranNumb % i == 0) {
                 x = true;
             }
-            if (x) {
-                return NEG_ANSWER;
-            } else {
-                return AFFIRM_ANSWER;
-            }
         }
-        return AFFIRM_ANSWER;
+        if (x) {
+            return NEG_ANSWER;
+        } else {
+            return AFFIRM_ANSWER;
+        }
     }
 }
+
 
