@@ -5,13 +5,7 @@ public class GCD {
     private static int ranNumb1;
     private static int ranNumb2;
 
-    public static void setRanNumb1(int ranNumb1) {
-        GCD.ranNumb1 = ranNumb1;
-    }
 
-    public static void setRanNumb2(int ranNumb2) {
-        GCD.ranNumb2 = ranNumb2;
-    }
 
     public static int getRanNumb1() {
         return ranNumb1;
@@ -26,8 +20,8 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
-            setRanNumb1((int) ((Math.random() * (100 - 1)) + 1));
-            setRanNumb2((int) ((Math.random() * (100 - 1)) + 1));
+            ranNumb1 = (int) ((Math.random() * (100 - 1)) + 1);
+            ranNumb2 = (int) ((Math.random() * (100 - 1)) + 1);
             arr[i] = new String[]{Integer.toString(getRanNumb1()) + " " + Integer.toString(getRanNumb2()),
                     Integer.toString(findNod(getRanNumb1(), getRanNumb2()))};
         }

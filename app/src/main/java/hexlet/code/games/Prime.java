@@ -8,10 +8,6 @@ public class Prime {
     public static final int STR_ARR = 3;
     public static final int COL_ARR = 2;
 
-    public static void setRanNumb(int ranNumb) {
-        Prime.ranNumb = ranNumb;
-    }
-
     public static int getRanNumb() {
         return ranNumb;
     }
@@ -21,7 +17,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         for (int i = 0; i < 3; i++) {
-            setRanNumb((int) (Math.random() * (100 - 2) + 2));
+            ranNumb = (int) (Math.random() * (100 - 2) + 2);
             arr[i] = new String[]{Integer.toString(getRanNumb()), findPrime(getRanNumb())};
         }
         Engine.logic(arr);
