@@ -13,13 +13,13 @@ public class Engine {
                 Engine.answer = scanner.nextLine();
                 if (arr[i][1].equals(answer)) {
                     String result = (answer.equals(arr[i][1])) ? "Correct!" : answer + " " + "is wrong answer ;(. "
-                            + "Correct answer was" + arr[i][1] + ".\n" + "Let's try again, " + " " + Cli.name + "!";
+                            + "Correct answer was" + arr[i][1] + ".\n" + "Let's try again, " + Cli.name + "!";
                     System.out.println(result);
 
                 } else {
                     if (!answer.equals(arr[i][1])) {
                         System.out.println(answer + " " + "is wrong answer ;(. Correct answer was" + " " + arr[i][1]
-                                + ".\n" + "Let's try again, " + " " + Cli.name + "!");
+                                + ".\n" + "Let's try again, " + Cli.name + "!");
                         System.exit(0);
                     }
                 }
