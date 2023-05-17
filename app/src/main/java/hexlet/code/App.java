@@ -6,7 +6,13 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 import java.util.Scanner;
 public class App {
+    public static final int CHOICE_3 = 3;
+    public static final int CHOICE_4 = 4;
+    public static final int CHOICE_5 = 5;
+    public static final int CHOICE_6 = 6;
+
     public static void main(String[] args) {
+
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greeting");
@@ -34,25 +40,25 @@ public class App {
                     Cli.greeting();
                     Even.playEven();
                     System.exit(0);
-                case 3:
+                case CHOICE_3:
                     System.out.println("Your choice: 3");
                     System.out.println("Welcome to the Brain Games!");
                     Cli.greeting();
                     Calc.calculation();
                     System.exit(0);
-                case 4:
+                case CHOICE_4:
                     System.out.println("Your choice: 4");
                     System.out.println("Welcome to the Brain Games!");
                     Cli.greeting();
                     GCD.maxNod();
                     System.exit(0);
-                case 5:
+                case CHOICE_5:
                     System.out.println("Your choice: 5");
                     System.out.println("Welcome to the Brain Games!");
                     Cli.greeting();
                     Progression.progress();
                     System.exit(0);
-                case 6:
+                case CHOICE_6:
                     System.out.println("Your choice: 6");
                     System.out.println("Welcome to the Brain Games!");
                     Cli.greeting();

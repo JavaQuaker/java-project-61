@@ -22,7 +22,7 @@ public class GCD {
         String[][] arr = new String[STR_ARR][COL_ARR];
 
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < STR_ARR; i++) {
             ranNumb1 = (int) ((Math.random() * (UP_LIMIT - 1)) + 1);
             ranNumb2 = (int) ((Math.random() * (UP_LIMIT - 1)) + 1);
             arr[i] = new String[]{Integer.toString(getRanNumb1()) + " " + Integer.toString(getRanNumb2()),
