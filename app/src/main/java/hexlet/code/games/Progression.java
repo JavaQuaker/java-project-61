@@ -1,6 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Arrays;
+
 
 /*Генерируем случайныe чсила:
  * аrrayLength - длина массива
@@ -25,11 +25,17 @@ public class Progression {
             String[] stringArr = new String[arrayLength];
             for (int i = 0; i < stringArr.length; i++) {
                 stringArr[i] = Integer.toString(array[i]);
+
                 if (i == randIndArr) {
                     stringArr[i] = "..";
                 }
             }
-            arr[k] = new String[]{Arrays.toString(stringArr), Integer.toString(array[randIndArr])};
+            StringBuilder builder = new StringBuilder();
+            for (String value : stringArr) {
+                builder.append(value + " ");
+            }
+            String str = builder.toString();
+            arr[k] = new String[]{str, Integer.toString(array[randIndArr])};
         }
         Engine.logic(arr);
     }
