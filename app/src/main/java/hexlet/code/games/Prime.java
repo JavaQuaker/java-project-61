@@ -3,9 +3,13 @@ import hexlet.code.Engine;
 
 public class Prime {
     public static int ranNumb;
+    public static final String AFFIRM_ANSWER = "yes";
+    public static final String NEG_ANSWER = "no";
+    public static final int STR_ARR = 3;
+    public static final int COL_ARR = 2;
 
     public static void prime() {
-        String[][] arr = new String[3][2];
+        String[][] arr = new String[STR_ARR][COL_ARR];
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         for (int i = 0; i < 3; i++) {
@@ -21,12 +25,12 @@ public class Prime {
                 x = true;
             }
             if (x) {
-                return "no";
+                return NEG_ANSWER;
             } else {
-                return "yes";
+                return AFFIRM_ANSWER;
             }
         }
-        return "yes";
+        return AFFIRM_ANSWER;
     }
 }
 
