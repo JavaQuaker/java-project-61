@@ -13,8 +13,8 @@ public class Calc {
             int result = (int) (Math.random() * array.length);
             String[] operations = {"+", "-", "*"};
 
-            arr[i] = new String[]{Integer.toString(ranNmb1) + operations[result]
-                    + Integer.toString(ranNumb2), Integer.toString(array[result])};
+            arr[i] = new String[]{Integer.toString(ranNmb1) + " " + operations[result]
+                    + " " + Integer.toString(ranNumb2), Integer.toString(array[result])};
         }
         Engine.logic(arr);
     }
