@@ -2,16 +2,18 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
     private String answer;
     private static String name;
 
     private static String getName() {
         return name;
     }
+
     public String getAnswer() {
         return answer;
     }
+
     public static void greeting() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
