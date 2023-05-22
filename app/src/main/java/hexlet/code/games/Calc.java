@@ -18,7 +18,7 @@ public class Calc {
                     Integer.toString(calculate(ranNmb1, indexOperation, ranNumb2))};
         }
         String rules = "What is the result of the expression?";
-        Engine.searchForAnswer(rules, questionAnswer);
+        Engine.findForAnswer(rules, questionAnswer);
     }
     public static int calculate(int ranNmb1, int indexOperation, int ranNumb2) {
         int result = 0;

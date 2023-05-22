@@ -15,7 +15,7 @@ public final class GCD {
                     Integer.toString(findMaxDev(ranNumb1, ranNumb2))};
         }
         String rules = "Find the greatest common divisor of given numbers.";
-        Engine.searchForAnswer(rules, questionAnswer);
+        Engine.findForAnswer(rules, questionAnswer);
     }
     public static int findMaxDev(int ranNumber1, int ranNumber2) {
 

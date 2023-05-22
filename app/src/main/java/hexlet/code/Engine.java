@@ -21,7 +21,7 @@ public final class Engine {
             System.out.println("Hello," + " " + getName() + "!");
         }
     }
-    public static void searchForAnswer(String rules, String[][] arr) {
+    public static void findForAnswer(String rules, String[][] arr) {
         System.out.println(rules);
         for (int i = 0; i < arr.length; i++) {
             System.out.println("Question: " + arr[i][0]);

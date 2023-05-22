@@ -20,6 +20,6 @@ public final class Even {
             }
         }
         String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.searchForAnswer(rules, questionAnswer);
+        Engine.findForAnswer(rules, questionAnswer);
     }
 }

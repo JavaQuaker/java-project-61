@@ -18,7 +18,7 @@ public final class Prime {
             }
         }
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.searchForAnswer(rules, questionAnswer);
+        Engine.findForAnswer(rules, questionAnswer);
     }
     public static boolean isPrime(int ranNumber) {
         for (int i = 2; i < ranNumber; i++) {

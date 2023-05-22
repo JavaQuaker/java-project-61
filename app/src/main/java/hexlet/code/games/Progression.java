@@ -29,7 +29,7 @@ public class Progression {
                     Integer.toString(progression[randIndArr])};
         }
         String rules = "What number is missing in the progression?";
-        Engine.searchForAnswer(rules, questionAnswer);
+        Engine.findForAnswer(rules, questionAnswer);
     }
 
     public static String defProgress(String[] trance, int[] array, int randIndArr) {
