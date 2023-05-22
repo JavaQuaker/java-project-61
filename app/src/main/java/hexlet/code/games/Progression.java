@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils.RandomClass;
 
 public class Progression {
     public static final int STR_ARR = 3;

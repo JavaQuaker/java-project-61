@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils.RandomClass;
 
 public class Calc {
     public static final int UP_LIMIT = 100;

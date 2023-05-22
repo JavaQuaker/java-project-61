@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils.RandomClass;
 
 public final class Prime {
     public static final String AFFIRM_ANSWER = "yes";
@@ -14,7 +15,7 @@ public final class Prime {
         defRulesGamePrime();
         for (int i = 0; i < Engine.STR_ARR; i++) {
             int ranNumb = RandomClass.searchRanNumber(UP_LIMIT, 2);
-            if (findPrime(ranNumb)) {
+            if (isPrime(ranNumb)) {
                 questionAnswer[i] = new String[]{Integer.toString(ranNumb), NEG_ANSWER};
             } else {
                 questionAnswer[i] = new String[]{Integer.toString(ranNumb), AFFIRM_ANSWER};
@@ -23,7 +24,7 @@ public final class Prime {
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         Engine.searchForAnswer(rules, questionAnswer);
     }
-    public static boolean findPrime(int ranNumber) {
+    public static boolean isPrime(int ranNumber) {
         for (int i = 2; i < ranNumber; i++) {
             if (ranNumber % i == 0) {
                 return true;
