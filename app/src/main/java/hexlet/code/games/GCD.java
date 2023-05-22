@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class GCD {
+public final class GCD {
     private int ranNumb1;
     private int ranNumb2;
     public static final int UP_LIMIT = 100;

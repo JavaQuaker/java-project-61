@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class Even {
+public final class Even {
     private int ranNumb;
 
     public static final String AFFIRM_ANSWER = "yes";

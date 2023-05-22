@@ -1,7 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 
-public class Prime {
+public final class Prime {
     private int ranNumb;
     public static final String AFFIRM_ANSWER = "yes";
     public static final String NEG_ANSWER = "no";
