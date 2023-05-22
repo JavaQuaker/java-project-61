@@ -5,7 +5,7 @@ import hexlet.code.Utils.RandomClass;
 
 public class Calc {
     public static final int UP_LIMIT = 100;
-    public static void definitionRanNumb() {
+    public static void defineRanNumb() {
         String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
         String[] operations = {"+", "-", "*"};
         for (int i = 0; i < Engine.STR_ARR; i++) {
@@ -15,12 +15,12 @@ public class Calc {
 
             questionAnswer[i] = new String[]{Integer.toString(ranNmb1) + " " + operations[indexOperation]
                     + " " + Integer.toString(ranNumb2),
-                    Integer.toString(calculation(ranNmb1, indexOperation, ranNumb2))};
+                    Integer.toString(calculate(ranNmb1, indexOperation, ranNumb2))};
         }
         String rules = "What is the result of the expression?";
         Engine.searchForAnswer(rules, questionAnswer);
     }
-    public static int calculation(int ranNmb1, int indexOperation, int ranNumb2) {
+    public static int calculate(int ranNmb1, int indexOperation, int ranNumb2) {
         int result = 0;
         switch (indexOperation) {
             case 0:

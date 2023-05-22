@@ -13,35 +13,34 @@ public class Progression {
     public static final int UP_LIMIT_RAND_IND = 9;
     public static final int DW_LIMIT_RAND_IND = 2;
 
-    public static void progress() {
+    public static void formProgress() {
         String[][] questionAnswer = new String[STR_ARR][COL_ARR];
-//        System.out.println("What number is missing in the progression?");
         for (int k = 0; k < STR_ARR; k++) {
             int arrayLength = RandomClass.searchRanNumber(UP_LIMIT_ARRAY, DW_LIMIT_ARRAY);
             int firstInd = RandomClass.searchRanNumber(UP_LIMIT_FIRST_IND, DW_LIMIT_FIRST_IND);
             int randInd = RandomClass.searchRanNumber(UP_LIMIT_RAND_IND, DW_LIMIT_RAND_IND);
-            int[] array = new int[arrayLength];
-            for (int i = 0; i < array.length; i++) {
-                array[i] = firstInd + (i * randInd);
+            int[] progression = new int[arrayLength];
+            for (int i = 0; i < progression.length; i++) {
+                progression[i] = firstInd + (i * randInd);
             }
             int randIndArr = RandomClass.searchRanNumber(arrayLength, 1);
-            String[] stringArr = new String[arrayLength];
-            questionAnswer[k] = new String[]{defProgress(stringArr, array, randIndArr),
-                    Integer.toString(array[randIndArr])};
+            String[] trance = new String[arrayLength];
+            questionAnswer[k] = new String[]{defProgress(trance, progression, randIndArr),
+                    Integer.toString(progression[randIndArr])};
         }
         String rules = "What number is missing in the progression?";
         Engine.searchForAnswer(rules, questionAnswer);
     }
 
-    public static String defProgress(String[] stringArr, int[] array, int randIndArr) {
-        for (int i = 0; i < stringArr.length; i++) {
-            stringArr[i] = Integer.toString(array[i]);
+    public static String defProgress(String[] trance, int[] array, int randIndArr) {
+        for (int i = 0; i < trance.length; i++) {
+            trance[i] = Integer.toString(array[i]);
             if (i == randIndArr) {
-                stringArr[i] = "..";
+                trance[i] = "..";
             }
         }
         StringBuilder builder = new StringBuilder();
-        for (String value : stringArr) {
+        for (String value : trance) {
             builder.append(value + " ");
         }
         String str = builder.toString();

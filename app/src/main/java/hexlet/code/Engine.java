@@ -5,18 +5,14 @@ import java.util.Scanner;
 public final class Engine {
     public static final int STR_ARR = 3;
     public static final int COL_ARR = 2;
-    private String answer;
+
     private static String name;
 
     private static String getName() {
         return name;
     }
 
-    public String getAnswer() {
-        return answer;
-    }
-
-    public static void greeting() {
+    public static void greet() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         Scanner scanner = new Scanner(System.in);
@@ -32,14 +28,14 @@ public final class Engine {
             System.out.print("Your answer: ");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextLine()) {
-                Engine engine = new Engine();
-                engine.answer = scanner.nextLine();
-                if (arr[i][1].equals(engine.getAnswer())) {
+
+                String answer = scanner.nextLine();
+                if (arr[i][1].equals(answer)) {
                     String result = "Correct!";
                     System.out.println(result);
 
                 } else {
-                    System.out.println(engine.getAnswer() + " " + "is wrong answer ;(. Correct answer was" + " "
+                    System.out.println(answer + " " + "is wrong answer ;(. Correct answer was" + " "
                             + arr[i][1] + ".\n" + "Let's try again, " + getName() + "!");
                     System.exit(0);
                 }

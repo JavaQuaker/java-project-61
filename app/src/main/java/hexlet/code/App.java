@@ -34,34 +34,34 @@ public class App {
             switch (x) {
                 case CHOICE_1:
                     System.out.println("Your choice: 1");
-                    Engine.greeting();
+                    Engine.greet();
                 case CHOICE_0:
                     System.out.println("Goodbye");
                     System.exit(0);
                 case CHOICE_2:
                     System.out.println("Your choice: 2");
-                    Engine.greeting();
+                    Engine.greet();
                     Even.playEven();
                     System.exit(0);
                 case CHOICE_3:
                     System.out.println("Your choice: 3");
-                    Engine.greeting();
-                    Calc.definitionRanNumb();
+                    Engine.greet();
+                    Calc.defineRanNumb();
                     System.exit(0);
                 case CHOICE_4:
                     System.out.println("Your choice: 4");
-                    Engine.greeting();
-                    GCD.arrFormationGCD();
+                    Engine.greet();
+                    GCD.formatGCD();
                     System.exit(0);
                 case CHOICE_5:
                     System.out.println("Your choice: 5");
-                    Engine.greeting();
-                    Progression.progress();
+                    Engine.greet();
+                    Progression.formProgress();
                     System.exit(0);
                 case CHOICE_6:
                     System.out.println("Your choice: 6");
-                    Engine.greeting();
-                    Prime.arrFormationPrime();
+                    Engine.greet();
+                    Prime.formatPrime();
                 default:
                     break;
 

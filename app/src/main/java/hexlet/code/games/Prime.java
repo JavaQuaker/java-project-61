@@ -7,12 +7,8 @@ public final class Prime {
     public static final String NEG_ANSWER = "no";
     public static final int UP_LIMIT = 100;
 
-    public static void defRulesGamePrime() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-    }
-    public static void arrFormationPrime() {
+    public static void formatPrime() {
         String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
-        defRulesGamePrime();
         for (int i = 0; i < Engine.STR_ARR; i++) {
             int ranNumb = RandomClass.searchRanNumber(UP_LIMIT, 2);
             if (isPrime(ranNumb)) {

@@ -5,7 +5,7 @@ import hexlet.code.Utils.RandomClass;
 
 public final class GCD {
     public static final int UP_LIMIT = 100;
-    public static void arrFormationGCD() {
+    public static void formatGCD() {
         String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
         for (int i = 0; i < Engine.STR_ARR; i++) {
             int ranNumb1 = RandomClass.searchRanNumber(UP_LIMIT, 1);
