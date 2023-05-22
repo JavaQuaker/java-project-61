@@ -14,7 +14,7 @@ public class Progression {
 
     public static void progress() {
         String[][] questionAnswer = new String[STR_ARR][COL_ARR];
-        System.out.println("What number is missing in the progression?");
+//        System.out.println("What number is missing in the progression?");
         for (int k = 0; k < STR_ARR; k++) {
             int arrayLength = RandomClass.searchRanNumber(UP_LIMIT_ARRAY, DW_LIMIT_ARRAY);
             int firstInd = RandomClass.searchRanNumber(UP_LIMIT_FIRST_IND, DW_LIMIT_FIRST_IND);
@@ -28,7 +28,8 @@ public class Progression {
             questionAnswer[k] = new String[]{defProgress(stringArr, array, randIndArr),
                     Integer.toString(array[randIndArr])};
         }
-        Engine.searchForAnswer(questionAnswer);
+        String rules = "What number is missing in the progression?";
+        Engine.searchForAnswer(rules, questionAnswer);
     }
 
     public static String defProgress(String[] stringArr, int[] array, int randIndArr) {

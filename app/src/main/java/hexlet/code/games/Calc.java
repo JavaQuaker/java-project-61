@@ -3,18 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
-    public static final int STR_ARR = 3;
-    public static final int COL_ARR = 2;
     public static final int UP_LIMIT = 100;
-
-    public static void rulesGameCalc() {
-        System.out.println("What is the result of the expression?");
-    }
     public static void definitionRanNumb() {
-        String[][] questionAnswer = new String[STR_ARR][COL_ARR];
-        rulesGameCalc();
+        String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
         String[] operations = {"+", "-", "*"};
-        for (int i = 0; i < STR_ARR; i++) {
+        for (int i = 0; i < Engine.STR_ARR; i++) {
             int ranNmb1 = RandomClass.searchRanNumber(UP_LIMIT, 0);
             int ranNumb2 = RandomClass.searchRanNumber(UP_LIMIT, 0);
             int indexOperation = RandomClass.searchRanNumber(0, 2);
@@ -23,7 +16,8 @@ public class Calc {
                     + " " + Integer.toString(ranNumb2),
                     Integer.toString(calculation(ranNmb1, indexOperation, ranNumb2))};
         }
-        Engine.searchForAnswer(questionAnswer);
+        String rules = "What is the result of the expression?";
+        Engine.searchForAnswer(rules, questionAnswer);
     }
     public static int calculation(int ranNmb1, int indexOperation, int ranNumb2) {
         int result = 0;

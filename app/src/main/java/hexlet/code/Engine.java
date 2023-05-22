@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public final class Engine {
+    public static final int STR_ARR = 3;
+    public static final int COL_ARR = 2;
     private String answer;
     private static String name;
 
@@ -23,7 +25,8 @@ public final class Engine {
             System.out.println("Hello," + " " + getName() + "!");
         }
     }
-    public static void searchForAnswer(String[][] arr) {
+    public static void searchForAnswer(String rules, String[][] arr) {
+        System.out.println(rules);
         for (int i = 0; i < arr.length; i++) {
             System.out.println("Question: " + arr[i][0]);
             System.out.print("Your answer: ");
