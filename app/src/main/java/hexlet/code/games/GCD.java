@@ -3,17 +3,17 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
-    private static int ranNumb1;
-    private static int ranNumb2;
+    private int ranNumb1;
+    private int ranNumb2;
     public static final int UP_LIMIT = 100;
     public static final int STR_ARR = 3;
     public static final int COL_ARR = 2;
 
-    public static int getRanNumb1() {
+    public int getRanNumb1() {
         return ranNumb1;
     }
 
-    public static int getRanNumb2() {
+    public int getRanNumb2() {
         return ranNumb2;
     }
 
@@ -22,13 +22,15 @@ public class GCD {
     }
 
     public static void arrFormationGCD() {
+        GCD gcd = new GCD();
         String[][] questionAnswer = new String[STR_ARR][COL_ARR];
         rulesGameGCD();
         for (int i = 0; i < STR_ARR; i++) {
-            ranNumb1 = RandomClass.searchRanNumber(UP_LIMIT, 1);
-            ranNumb2 = RandomClass.searchRanNumber(UP_LIMIT, 1);
-            questionAnswer[i] = new String[]{Integer.toString(getRanNumb1()) + " " + Integer.toString(getRanNumb2()),
-                    Integer.toString(searchMaxDev(getRanNumb1(), getRanNumb2()))};
+            gcd.ranNumb1 = RandomClass.searchRanNumber(UP_LIMIT, 1);
+            gcd.ranNumb2 = RandomClass.searchRanNumber(UP_LIMIT, 1);
+            questionAnswer[i] = new String[]{Integer.toString(gcd.getRanNumb1()) + " "
+                    + Integer.toString(gcd.getRanNumb2()),
+                    Integer.toString(searchMaxDev(gcd.getRanNumb1(), gcd.getRanNumb2()))};
         }
         Engine.searchForAnswer(questionAnswer);
     }
