@@ -4,8 +4,13 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
+
 import java.util.Scanner;
+
 public class App {
+    public static final int CHOICE_0 = 0;
+    public static final int CHOICE_1 = 1;
+    public static final int CHOICE_2 = 2;
     public static final int CHOICE_3 = 3;
     public static final int CHOICE_4 = 4;
     public static final int CHOICE_5 = 5;
@@ -27,42 +32,36 @@ public class App {
         if (scanner.hasNextInt()) {
             int x = scanner.nextInt();
             switch (x) {
-                case 1:
+                case CHOICE_1:
                     System.out.println("Your choice: 1");
-                    System.out.println("Welcome to the Brain Games!");
-                    Cli.greeting();
-                case 0:
+                    Engine.greeting();
+                case CHOICE_0:
                     System.out.println("Goodbye");
                     System.exit(0);
-                case 2:
+                case CHOICE_2:
                     System.out.println("Your choice: 2");
-                    System.out.println("Welcome to the Brain Games!");
-                    Cli.greeting();
+                    Engine.greeting();
                     Even.playEven();
                     System.exit(0);
                 case CHOICE_3:
                     System.out.println("Your choice: 3");
-                    System.out.println("Welcome to the Brain Games!");
-                    Cli.greeting();
-                    Calc.calculation();
+                    Engine.greeting();
+                    Calc.definitionRanNumb();
                     System.exit(0);
                 case CHOICE_4:
                     System.out.println("Your choice: 4");
-                    System.out.println("Welcome to the Brain Games!");
-                    Cli.greeting();
-                    GCD.maxNod();
+                    Engine.greeting();
+                    GCD.arrFormationGCD();
                     System.exit(0);
                 case CHOICE_5:
                     System.out.println("Your choice: 5");
-                    System.out.println("Welcome to the Brain Games!");
-                    Cli.greeting();
+                    Engine.greeting();
                     Progression.progress();
                     System.exit(0);
                 case CHOICE_6:
                     System.out.println("Your choice: 6");
-                    System.out.println("Welcome to the Brain Games!");
-                    Cli.greeting();
-                    Prime.prime();
+                    Engine.greeting();
+                    Prime.arrFormationPrime();
                 default:
                     break;
 

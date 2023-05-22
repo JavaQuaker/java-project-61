@@ -13,28 +13,29 @@ public class Prime {
         return ranNumb;
     }
 
-    public static void prime() {
-        String[][] arr = new String[STR_ARR][COL_ARR];
+    public static void defRulesGamePrime() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-
-        for (int i = 0; i < STR_ARR; i++) {
-            ranNumb = (int) (Math.random() * (UP_LIMIT - 2) + 2);
-            arr[i] = new String[]{Integer.toString(getRanNumb()), findPrime(getRanNumb())};
-        }
-        Engine.logic(arr);
     }
-    public static String findPrime(int ranNumber) {
-        boolean x = false;
-        for (int i = 2; i < getRanNumb(); i++) {
-            if (getRanNumb() % i == 0) {
-                x = true;
+    public static void arrFormationPrime() {
+        String[][] questionAnswer = new String[STR_ARR][COL_ARR];
+        defRulesGamePrime();
+        for (int i = 0; i < STR_ARR; i++) {
+            ranNumb = RandomClass.searchRanNumber(UP_LIMIT, 2);
+            if (findPrime(getRanNumb())) {
+                questionAnswer[i] = new String[]{Integer.toString(ranNumb), NEG_ANSWER};
+            } else {
+                questionAnswer[i] = new String[]{Integer.toString(ranNumb), AFFIRM_ANSWER};
             }
         }
-        if (x) {
-            return NEG_ANSWER;
-        } else {
-            return AFFIRM_ANSWER;
+        Engine.searchForAnswer(questionAnswer);
+    }
+    public static boolean findPrime(int ranNumber) {
+        for (int i = 2; i < ranNumber; i++) {
+            if (ranNumber % i == 0) {
+                return true;
+            }
         }
+        return false;
     }
 }
 
