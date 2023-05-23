@@ -18,7 +18,6 @@ public class App {
 
     public static void main(String[] args) {
 
-
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greeting");
         System.out.println("2 - Even");
@@ -34,33 +33,35 @@ public class App {
             switch (x) {
                 case CHOICE_1:
                     System.out.println("Your choice: 1");
-                    Engine.greet();
+                    Cli.greeting();
+                    break;
+
                 case CHOICE_0:
                     System.out.println("Goodbye");
-                    System.exit(0);
+                    break;
+
                 case CHOICE_2:
                     System.out.println("Your choice: 2");
-                    Engine.greet();
                     Even.playEven();
-                    System.exit(0);
+                    break;
+
                 case CHOICE_3:
                     System.out.println("Your choice: 3");
-                    Engine.greet();
                     Calc.defineRanNumb();
-                    System.exit(0);
+                    break;
+
                 case CHOICE_4:
                     System.out.println("Your choice: 4");
-                    Engine.greet();
                     GCD.formatGCD();
-                    System.exit(0);
+                    break;
+
                 case CHOICE_5:
                     System.out.println("Your choice: 5");
-                    Engine.greet();
                     Progression.formProgress();
-                    System.exit(0);
+                    break;
+
                 case CHOICE_6:
                     System.out.println("Your choice: 6");
-                    Engine.greet();
                     Prime.formatPrime();
                 default:
                     break;

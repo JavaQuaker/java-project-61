@@ -4,14 +4,12 @@ import hexlet.code.Engine;
 import hexlet.code.Utils.RandomClass;
 
 public final class Even {
-
     public static final String AFFIRM_ANSWER = "yes";
     public static final String NEG_ANSWER = "no";
     public static final int UP_LIMIT = 100;
-
     public static void playEven() {
-        String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
-        for (int i = 0; i < Engine.STR_ARR; i++) {
+        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][Engine.COL_ARR];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int ranNumb = RandomClass.searchRanNumber(UP_LIMIT, 1);
             if (ranNumb % 2 == 0) {
                 questionAnswer[i] = new String[]{Integer.toString(ranNumb), AFFIRM_ANSWER};

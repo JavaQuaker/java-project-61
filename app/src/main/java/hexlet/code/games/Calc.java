@@ -6,9 +6,9 @@ import hexlet.code.Utils.RandomClass;
 public class Calc {
     public static final int UP_LIMIT = 100;
     public static void defineRanNumb() {
-        String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
+        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][Engine.COL_ARR];
         String[] operations = {"+", "-", "*"};
-        for (int i = 0; i < Engine.STR_ARR; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int ranNmb1 = RandomClass.searchRanNumber(UP_LIMIT, 0);
             int ranNumb2 = RandomClass.searchRanNumber(UP_LIMIT, 0);
             int indexOperation = RandomClass.searchRanNumber(0, 2);
@@ -23,13 +23,13 @@ public class Calc {
     public static int calculate(int ranNmb1, int indexOperation, int ranNumb2) {
         int result = 0;
         switch (indexOperation) {
-            case 0:
+            case '+':
                 result = ranNmb1 + ranNumb2;
                 break;
-            case 1:
+            case '-':
                 result = ranNmb1 - ranNumb2;
                 break;
-            case 2:
+            case '*':
                 result = ranNmb1 * ranNumb2;
                 break;
             default:

@@ -4,8 +4,8 @@ import hexlet.code.Engine;
 import hexlet.code.Utils.RandomClass;
 
 public class Progression {
-    public static final int STR_ARR = 3;
-    public static final int COL_ARR = 2;
+
+
     public static final int UP_LIMIT_ARRAY = 20;
     public static final int DW_LIMIT_ARRAY = 10;
     public static final int UP_LIMIT_FIRST_IND = 20;
@@ -14,8 +14,8 @@ public class Progression {
     public static final int DW_LIMIT_RAND_IND = 2;
 
     public static void formProgress() {
-        String[][] questionAnswer = new String[STR_ARR][COL_ARR];
-        for (int k = 0; k < STR_ARR; k++) {
+        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][Engine.COL_ARR];
+        for (int k = 0; k < Engine.ROUNDS_COUNT; k++) {
             int arrayLength = RandomClass.searchRanNumber(UP_LIMIT_ARRAY, DW_LIMIT_ARRAY);
             int firstInd = RandomClass.searchRanNumber(UP_LIMIT_FIRST_IND, DW_LIMIT_FIRST_IND);
             int randInd = RandomClass.searchRanNumber(UP_LIMIT_RAND_IND, DW_LIMIT_RAND_IND);

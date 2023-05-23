@@ -8,8 +8,8 @@ public final class Prime {
     public static final int UP_LIMIT = 100;
 
     public static void formatPrime() {
-        String[][] questionAnswer = new String[Engine.STR_ARR][Engine.COL_ARR];
-        for (int i = 0; i < Engine.STR_ARR; i++) {
+        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][Engine.COL_ARR];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int ranNumb = RandomClass.searchRanNumber(UP_LIMIT, 2);
             if (isPrime(ranNumb)) {
                 questionAnswer[i] = new String[]{Integer.toString(ranNumb), NEG_ANSWER};
