@@ -15,8 +15,8 @@
 
 
 
- [Проверка на четность](https://asciinema.org/a/YyBUCldPktQlzvK1EAEc3SB2c an example of the operation of the game "Even")
- [Калькулятор](https://asciinema.org/a/AKr9Db4FtqoU904hVGkzz8iqE an example of the operation of the game "calc")  
- [НОД](https://asciinema.org/a/sm65x3WFSiPxvzSH1CGFabOMp an example of the operation of the game "GCD")  
- [Арифметическая прогрессия](https://asciinema.org/a/ljp0fT6L7f9wXSccrnrGwWYH6 an example of the operation of the game "Progression")
- [Простое ли число?](https://asciinema.org/a/w7Zhlw9xuOnT1Tw279LoWLhKQ an example of the operation of the game "Prime")
+ [Проверка на четность](https://asciinema.org/a/YyBUCldPktQlzvK1EAEc3SB2c)
+ [Калькулятор](https://asciinema.org/a/AKr9Db4FtqoU904hVGkzz8iqE)  
+ [НОД](https://asciinema.org/a/sm65x3WFSiPxvzSH1CGFabOMp)  
+ [Арифметическая прогрессия](https://asciinema.org/a/ljp0fT6L7f9wXSccrnrGwWYH6)
+ [Простое ли число?](https://asciinema.org/a/w7Zhlw9xuOnT1Tw279LoWLhKQ)
