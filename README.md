@@ -1,4 +1,4 @@
-<h4>Игры разума</h4>
+<H4>Игры разума</H4>
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/JavaQuaker/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/JavaQuaker/java-project-61/actions)
@@ -24,3 +24,24 @@
  [Арифметическая прогрессия](https://asciinema.org/a/ljp0fT6L7f9wXSccrnrGwWYH6)
  
  [Простое ли число?](https://asciinema.org/a/w7Zhlw9xuOnT1Tw279LoWLhKQ)
+
+ <H3>Стек</H3>
+ <p>Java, Gradle, Make, Checkstyle, Code Climate.</p>
+
+ <H3>Setup</H3>
+
+ ```
+make setup
+```
+
+<H3>Build</H3>
+
+```
+make build
+```
+
+<H3>Run</H3>
+
+```
+make run dist
+```
