@@ -1,10 +1,9 @@
-### Игры разума
-_________________
+# Игры разума
 
-### Hexlet tests and linter status:
+
+## Hexlet tests and linter status:
 [![Actions Status](https://github.com/JavaQuaker/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/JavaQuaker/java-project-61/actions)
-__________________
-
+###
 <h3>Описание</h3>
 <p>консольное приложения с выбором игр:
 <ul>
